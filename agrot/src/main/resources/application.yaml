@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: agrot
+  datasource:
+    url: "${SPRING_DATASOURCE_URL:jdbc:mariadb://localhost:3306/miapp}"
+    username: "${SPRING_DATASOURCE_USERNAME:miapp}"
+    password: "${SPRING_DATASOURCE_PASSWORD:miapp_dev}"
+  jpa:
+    hibernate:
+      ddl-auto: "${SPRING_JPA_HIBERNATE_DDL_AUTO:update}"
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  server:
+    port: 8080
+logging:
+  level:
+    root: INFO
+    com.daw.agrot: DEBUG
+
